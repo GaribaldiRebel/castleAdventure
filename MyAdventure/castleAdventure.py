@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 
+######################################
+# This text adventure program has been  
+# coded by Phil Gibbons as a learning
+# tool.
+#
+# Insperation and most of code 
+# provided by Jeffrey Armstrong
+# from his excellent PyOhio 2013
+# video https://youtu.be/8CDePunJlck
+#
+
 import cmd
 from room import get_room
 
