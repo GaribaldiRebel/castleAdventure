@@ -1,0 +1,4 @@
+{"name" : "A field",
+ "description" :" You are standing outside a castle. There is a moat.",
+ "neighbours" : {"s" : 2}
+}
