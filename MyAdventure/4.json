@@ -1,0 +1,4 @@
+{"name":"Moat",
+ "description":"You are swimming in the moat! It is a little chilly but as long as you are moving you should stay warm....hopefully. Wait...you see a small crack in the wall to your south.",
+ "neighbours":{"e":2, "s":5}
+}

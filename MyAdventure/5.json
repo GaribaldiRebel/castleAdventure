@@ -1,0 +1,4 @@
+{"name":"Hole in wall",
+ "description":"You have crawled into a very small hole. It is tight but you can squeeze further south or wiggle back north.",
+ "neighbours":{"n":4, "s":6}
+}

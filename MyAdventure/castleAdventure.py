@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 ######################################
-# This text adventure program has been  
+# This text adventure program has been
 # coded by Phil Gibbons as a learning
 # tool.
 #
-# Insperation and most of code 
+# Insperation and most of code
 # provided by Jeffrey Armstrong
 # from his excellent PyOhio 2013
 # video https://youtu.be/8CDePunJlck
@@ -13,6 +13,7 @@
 
 import cmd
 from room import get_room
+import textwrap
 
 
 class Game(cmd.Cmd):
@@ -21,7 +22,7 @@ class Game(cmd.Cmd):
         cmd.Cmd.__init__(self)
 
         self.loc = get_room(1)
-        self.look()
+        self.print_room()
 
     def move(self, dir):
         newroom = self.loc._neighbour(dir)
@@ -29,12 +30,13 @@ class Game(cmd.Cmd):
             print("You seemed to have banged your head! Be more careful.")
         else:
             self.loc = get_room(newroom)
-            self.look()
+            self.print_room()
 
-    def look(self):
+    def print_room(self):
         print(self.loc.name)
         print("")
-        print(self.loc.description)
+        for line in textwrap.wrap(self.loc.description, 72):
+            print(line)
 
     def do_quit(self, args):
         """Quits the game."""
