@@ -9,7 +9,7 @@ def main(dbname):
     con = sqlite3.connect(dbname)
 
     con.execute(
-        "CREATE TABLE IF NOT EXIST rooms(id INTEGER PRIMARY KEY, json TEXT NOT NULL)")
+        "CREATE TABLE IF NOT EXISTS rooms(id INTEGER PRIMARY KEY, json TEXT NOT NULL)")
     con.commit()
 
     for filename in os.listdir():
