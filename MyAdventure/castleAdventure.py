@@ -43,7 +43,7 @@ class Game(cmd.Cmd):
 
     # Function to print out room.
     def print_room(self):
-        os.system("clear")
+        os.system('clear')
         print(self.loc.name)
         print("")
         # Uses textwrap to tidy text on screen.
