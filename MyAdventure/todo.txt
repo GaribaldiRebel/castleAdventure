@@ -1,0 +1,10 @@
+# To Do
+
+1) Finish rooms
+2) Status bar, scoring - curses module
+3) Develop command line for complex input - nltk module
+4) Add player info i.e. health, inventory
+5) Add NPC's, health and confrontations/dialogue with NPC's.
+6) Add items in rooms and enable player to pick up
+7) Add puzzles
+8) Final objective and way of comleting game.
