@@ -1,14 +1,25 @@
 import json
+import sqlite3
 
 
-def get_room(id):
+# Main function that loads room.
+def get_room(id, dbfile):
     ret = None
-    with open(str(id) + ".json", "r") as f:
-        jsontext = f.read()
+
+    con = sqlite3.connect(dbfile)
+
+    for row in con.execute("SELECT json FROM rooms WHERE id=?", (id,)):
+
+        jsontext = row[0]
         d = json.loads(jsontext)
         d['id'] = id
         ret = Room(**d)
+        break
+
+    con.close()
     return ret
+
+# Room class.
 
 
 class Room():
