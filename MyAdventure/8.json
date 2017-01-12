@@ -1,0 +1,4 @@
+{"name":"Pit",
+ "description":"Oh no! There is a hole in the floor and you fall into a deep pit. You try to scramble back up and find it is too steep. Looks like you're stuck!",
+ "neighbours":{"n": 3}
+}
